@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,8 +48,28 @@
 				B8E360D39A8A55D0E1921081 /* Pods-TrainTube.debug.xcconfig */,
 				829F9827DACE945A7F76AED4 /* Pods-TrainTube.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		444E35572550ADDB003FC2A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		444E355A2550AE01003FC2A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		444E355B2550AE0B003FC2A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		44F5DFCE254EC68600F0648B = {
@@ -73,6 +93,9 @@
 		44F5DFD9254EC68600F0648B /* TrainTube */ = {
 			isa = PBXGroup;
 			children = (
+				444E355B2550AE0B003FC2A8 /* Model */,
+				444E355A2550AE01003FC2A8 /* View */,
+				444E35572550ADDB003FC2A8 /* Controller */,
 				44F5DFDA254EC68600F0648B /* AppDelegate.swift */,
 				44F5DFDC254EC68600F0648B /* SceneDelegate.swift */,
 				44F5DFDE254EC68600F0648B /* ViewController.swift */,
