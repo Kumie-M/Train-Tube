@@ -1,5 +1,5 @@
 //
-//  tableTableViewController.swift
+//  TableViewController.swift
 //  TrainTube
 //
 //  Created by Kumie Miyata on 2020/11/03.
@@ -7,7 +7,16 @@
 
 import UIKit
 
-class tableTableViewController: UITableViewController {
+class TableViewController: UITableViewController {
+    
+    var youtubeData = YouTubeData()
+    
+    var videoIdArray = [String]()
+    var titleArray = [String]()
+    var imageURLStringArray = [String]()
+    var youtubeURLArray = [String]()
+    
+    let refresh = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
