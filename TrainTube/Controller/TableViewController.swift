@@ -31,16 +31,50 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    @objc var scrollView: UIScrollView {
+        
+        return tableView
     }
-
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+        
+        cell.selectionStyle = .none
+        
+        let profileImageURL = URL(string: (self.imageURLStringArray[indexPath.row] as String?)!)
+        
+        cell.imageView?.sd_setImage(with: profileImageURL, completed: {
+            (image, error, _, _) in
+            
+            if error == nil {
+                
+                cell.layoutSubviews()
+            }
+        })
+        
+        cell.textLabel!.text = self.titleArray[indexPath.row]
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        cell.detailTextLabel?.adjustsFontSizeToFitWidth = true
+        cell.textLabel?.numberOfLines = 5
+        cell.detailTextLabel?.numberOfLines = 5
+        
+        return cell
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return titleArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return view.frame.height / 5
     }
 
     func getData() {
