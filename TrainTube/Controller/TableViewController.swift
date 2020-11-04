@@ -26,6 +26,14 @@ class TableViewController: UITableViewController {
         
         getData()
     }
+    
+    @objc func update() {
+        
+        getData()
+        tableView.reloadData()
+        refresh.endRefreshing()
+        
+    }
 
     @objc var scrollView: UIScrollView {
         
