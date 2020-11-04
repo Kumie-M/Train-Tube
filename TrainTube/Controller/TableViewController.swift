@@ -24,7 +24,11 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.refreshControl = refresh
+        refresh.addTarget(self, action: #selector(update), for: .valueChanged)
+        
         getData()
+        tableView.reloadData()
     }
     
     @objc func update() {
