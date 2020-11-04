@@ -87,7 +87,7 @@ class TableViewController: UITableViewController {
     }
     
     func getData() {
-        var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBNbCP8Ns3DKgKcXj4oDLY6X9eV-mTc5Kk&q=ふみきりチャンネル ふみきりアニメ 電車 新幹線 踏切&part=snippet&maxResults=40&order=date"
+        var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBNbCP8Ns3DKgKcXj4oDLY6X9eV-mTc5Kk&q=ふみきりチャンネル 電車 新幹線 カンカン&part=snippet&maxResults=40&order=date"
         
         let url = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
