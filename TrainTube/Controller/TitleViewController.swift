@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class TitleViewController: UIViewController {
     
@@ -14,9 +15,10 @@ class TitleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             
-            self.performSegue(withIdentifier: "nextVC", sender: nil)
+            let nextVC = TableViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
         }
     }
 }
