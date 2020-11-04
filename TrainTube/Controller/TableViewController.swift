@@ -22,30 +22,24 @@ class TableViewController: UITableViewController {
     
     let refresh = UIRefreshControl()
     
-    @IBOutlet weak var bannerView: GADBannerView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = true
         
         tableView.refreshControl = refresh
         refresh.addTarget(self, action: #selector(update), for: .valueChanged)
         
         getData()
         tableView.reloadData()
-        
-        bannerView.adUnitID = "ca-app-pub-2138640926209454/1724374585"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
     }
     
     @objc func update() {
-        
         getData()
         tableView.reloadData()
         refresh.endRefreshing()
-        
     }
-
+    
     @objc var scrollView: UIScrollView {
         
         return tableView
@@ -91,7 +85,7 @@ class TableViewController: UITableViewController {
         
         return view.frame.height / 4
     }
-
+    
     func getData() {
         var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBNbCP8Ns3DKgKcXj4oDLY6X9eV-mTc5Kk&q=ふみきりチャンネル ふみきりアニメ 電車 新幹線 踏切&part=snippet&maxResults=40&order=date"
         
@@ -127,9 +121,7 @@ class TableViewController: UITableViewController {
                 print(error)
                 break
             }
-            
             self.tableView.reloadData()
-            
         }
     }
 }
