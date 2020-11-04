@@ -9,6 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SDWebImage
+import GoogleMobileAds
 
 class TableViewController: UITableViewController {
     
@@ -20,7 +21,9 @@ class TableViewController: UITableViewController {
     var youtubeURLArray = [String]()
     
     let refresh = UIRefreshControl()
-
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +32,10 @@ class TableViewController: UITableViewController {
         
         getData()
         tableView.reloadData()
+        
+        bannerView.adUnitID = "ca-app-pub-2138640926209454/1724374585"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     @objc func update() {
@@ -82,7 +89,7 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return view.frame.height / 5
+        return view.frame.height / 4
     }
 
     func getData() {

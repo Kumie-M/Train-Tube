@@ -11,5 +11,6 @@ target 'TrainTube' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SDWebImage'
+  pod 'GoogleMobileAds'
 
 end

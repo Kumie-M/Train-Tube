@@ -1,17 +1,19 @@
 PODS:
-  - Alamofire (5.2.2)
+  - Alamofire (5.3.0)
+  - GoogleMobileAds (7.8.0)
   - Realm (10.1.1):
     - Realm/Headers (= 10.1.1)
   - Realm/Headers (10.1.1)
   - RealmSwift (10.1.1):
     - Realm (= 10.1.1)
-  - SDWebImage (5.9.2):
-    - SDWebImage/Core (= 5.9.2)
-  - SDWebImage/Core (5.9.2)
+  - SDWebImage (5.9.4):
+    - SDWebImage/Core (= 5.9.4)
+  - SDWebImage/Core (5.9.4)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - GoogleMobileAds
   - Realm
   - RealmSwift
   - SDWebImage
@@ -20,18 +22,20 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GoogleMobileAds
     - Realm
     - RealmSwift
     - SDWebImage
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Alamofire: 2c792affbdc2f18016e08fdbcacd60aebe1ba593
+  GoogleMobileAds: 0ed4d41b03fe768e2e2945df68707fd4ff97c179
   Realm: 784ca1da1453e31a9c9adc14445421a81f316119
   RealmSwift: cc52fe0dcea56387274dff36e19219e055a3bb84
-  SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 4d76337c2fa6536a201d0f2972eab2357bdaeb91
+PODFILE CHECKSUM: 7cc660c4c52d79ac4cbdabf73cf031f048c648df
 
 COCOAPODS: 1.10.0

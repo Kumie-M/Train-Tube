@@ -59,6 +59,9 @@
                         <viewLayoutGuide key="safeArea" id="swA-Kd-nBD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="bannerView" destination="vPG-pq-bpM" id="Iwg-9Y-w4y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZv-4Y-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
