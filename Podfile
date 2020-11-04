@@ -12,5 +12,6 @@ target 'TrainTube' do
   pod 'SwiftyJSON'
   pod 'SDWebImage'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'youtube-ios-player-helper'
 
 end
