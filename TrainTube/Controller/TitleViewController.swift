@@ -16,7 +16,6 @@ class TitleViewController: UIViewController {
         super.viewDidLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-            
             let nextVC = TableViewController()
             self.navigationController?.pushViewController(nextVC, animated: true)
         }
