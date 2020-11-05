@@ -8,25 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1CC88C684FC6C687F69D354B /* Pods_TrainTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83811899657D042847C65558 /* Pods_TrainTube.framework */; };
+		441F8EDD25540F4900D2A94F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F8EDC25540F4900D2A94F /* TableViewController.swift */; };
 		444E3560255175E1003FC2A8 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E355F255175E1003FC2A8 /* TitleViewController.swift */; };
-		444E35632551761E003FC2A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E35622551761E003FC2A8 /* TableViewController.swift */; };
 		444E357725518C0B003FC2A8 /* YouTubeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E357625518C0B003FC2A8 /* YouTubeData.swift */; };
 		44F5DFDB254EC68600F0648B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5DFDA254EC68600F0648B /* AppDelegate.swift */; };
 		44F5DFDD254EC68600F0648B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5DFDC254EC68600F0648B /* SceneDelegate.swift */; };
-		44F5DFDF254EC68600F0648B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5DFDE254EC68600F0648B /* ViewController.swift */; };
 		44F5DFE2254EC68600F0648B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F5DFE0254EC68600F0648B /* Main.storyboard */; };
 		44F5DFE4254EC68B00F0648B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F5DFE3254EC68B00F0648B /* Assets.xcassets */; };
 		44F5DFE7254EC68B00F0648B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F5DFE5254EC68B00F0648B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		441F8EDC25540F4900D2A94F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		444E355F255175E1003FC2A8 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
-		444E35622551761E003FC2A8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		444E357625518C0B003FC2A8 /* YouTubeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeData.swift; sourceTree = "<group>"; };
 		44F5DFD7254EC68600F0648B /* TrainTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F5DFDA254EC68600F0648B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44F5DFDC254EC68600F0648B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44F5DFDE254EC68600F0648B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44F5DFE1254EC68600F0648B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44F5DFE3254EC68B00F0648B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44F5DFE6254EC68B00F0648B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				444E355F255175E1003FC2A8 /* TitleViewController.swift */,
-				444E35622551761E003FC2A8 /* TableViewController.swift */,
+				441F8EDC25540F4900D2A94F /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,7 +108,6 @@
 				444E35572550ADDB003FC2A8 /* Controller */,
 				44F5DFDA254EC68600F0648B /* AppDelegate.swift */,
 				44F5DFDC254EC68600F0648B /* SceneDelegate.swift */,
-				44F5DFDE254EC68600F0648B /* ViewController.swift */,
 				44F5DFE8254EC68B00F0648B /* Info.plist */,
 			);
 			path = TrainTube;
@@ -238,11 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F5DFDF254EC68600F0648B /* ViewController.swift in Sources */,
 				444E3560255175E1003FC2A8 /* TitleViewController.swift in Sources */,
 				444E357725518C0B003FC2A8 /* YouTubeData.swift in Sources */,
-				444E35632551761E003FC2A8 /* TableViewController.swift in Sources */,
 				44F5DFDB254EC68600F0648B /* AppDelegate.swift in Sources */,
+				441F8EDD25540F4900D2A94F /* TableViewController.swift in Sources */,
 				44F5DFDD254EC68600F0648B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
