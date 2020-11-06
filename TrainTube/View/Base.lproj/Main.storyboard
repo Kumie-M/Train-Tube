@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0gA-Mv-bij">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,10 +13,41 @@
             <objects>
                 <viewController id="fGC-X1-Xml" customClass="TitleViewController" customModule="TrainTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G0D-GW-1sW">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Train Tube" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRy-uK-ANs">
+                                <rect key="frame" x="25" y="104" width="364" height="68"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="364" id="7SO-gX-x3a"/>
+                                    <constraint firstAttribute="width" constant="180" id="EYg-RS-dnF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="YXw-gv-eQS"/>
+                                    <constraint firstAttribute="height" constant="68" id="bmy-Hs-ni1"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="68" id="hst-H0-TwU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wnv-Cz-pig">
+                                <rect key="frame" x="0.0" y="244" width="428" height="682"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BgL-Le-84R"/>
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PRy-uK-ANs" firstAttribute="leading" secondItem="BgL-Le-84R" secondAttribute="leading" constant="25" id="0RE-m4-uTb"/>
+                            <constraint firstItem="BgL-Le-84R" firstAttribute="trailing" secondItem="PRy-uK-ANs" secondAttribute="trailing" constant="37" id="9sF-Ot-CBm"/>
+                            <constraint firstItem="PRy-uK-ANs" firstAttribute="top" secondItem="BgL-Le-84R" secondAttribute="top" constant="60" id="GKz-PH-6Z7"/>
+                            <constraint firstItem="PRy-uK-ANs" firstAttribute="top" secondItem="BgL-Le-84R" secondAttribute="top" constant="60" id="I6n-sG-mib"/>
+                            <constraint firstItem="BgL-Le-84R" firstAttribute="trailing" secondItem="PRy-uK-ANs" secondAttribute="trailing" constant="25" id="Knq-9n-idu"/>
+                            <constraint firstItem="PRy-uK-ANs" firstAttribute="top" secondItem="BgL-Le-84R" secondAttribute="top" constant="60" id="UcZ-lX-sTC"/>
+                            <constraint firstItem="PRy-uK-ANs" firstAttribute="leading" secondItem="BgL-Le-84R" secondAttribute="leading" constant="37" id="dRa-UV-hL8"/>
+                            <constraint firstItem="BgL-Le-84R" firstAttribute="trailing" secondItem="PRy-uK-ANs" secondAttribute="trailing" constant="25" id="pVn-Oo-DOh"/>
+                            <constraint firstItem="PRy-uK-ANs" firstAttribute="leading" secondItem="BgL-Le-84R" secondAttribute="leading" constant="25" id="yGS-fg-JEj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="afm-15-Zwd"/>
                     <connections>
@@ -25,22 +56,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWv-cw-3oE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6218.6915887850464" y="-189.20086393088553"/>
+            <point key="canvasLocation" x="6217.2897196261674" y="-190.49676025917927"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="mg3-w8-CRD">
             <objects>
                 <tableViewController id="hni-NG-8Fu" customClass="TableViewController" customModule="TrainTube" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zFx-ZZ-sqP">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="299" id="8mB-ja-BUR">
-                                <rect key="frame" x="0.0" y="28" width="428" height="299"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8mB-ja-BUR" id="V2U-dy-YBW">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="299"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -62,7 +93,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0gA-Mv-bij" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PYe-W1-e76">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
