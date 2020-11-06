@@ -136,6 +136,7 @@
 				44F5DFD4254EC68600F0648B /* Frameworks */,
 				44F5DFD5254EC68600F0648B /* Resources */,
 				D03D6F8FF72323DF3A826AA7 /* [CP] Embed Pods Frameworks */,
+				54159F05618E04F06F41F7B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +193,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54159F05618E04F06F41F7B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainTube/Pods-TrainTube-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainTube/Pods-TrainTube-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrainTube/Pods-TrainTube-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		85EA56766F095AEBD89ADC61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

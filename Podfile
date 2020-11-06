@@ -11,6 +11,6 @@ target 'TrainTube' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SDWebImage'
-  pod 'Google-Mobile-Ads-SDK'
+  pod 'NendSDK_iOS'
 
 end
