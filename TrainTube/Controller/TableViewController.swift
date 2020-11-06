@@ -97,7 +97,7 @@ class TableViewController: UITableViewController {
             switch response.result {
             case .success:
                 
-                for i in 0...29 {
+                for i in 0...19 {
                     
                     let json:JSON = JSON(response.data as Any)
                     var videoId = json["items"][i]["id"]["playlistId"].string
