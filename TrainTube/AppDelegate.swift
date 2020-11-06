@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -9,8 +9,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SDWebImage
+import NendAd
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController,
+                           NADViewDelegate {
     
     var youtubeData = YouTubeData()
     
@@ -20,6 +22,8 @@ class TableViewController: UITableViewController {
     var youtubeURLArray = [String]()
     
     let refresh = UIRefreshControl()
+    
+    @IBOutlet weak var nadView: NADView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,13 @@ class TableViewController: UITableViewController {
         
         getData()
         tableView.reloadData()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        nadView.setNendID(1018499, apiKey: "c357936aceb7d21ff7b09eb48481d2a704f2e96b")
+        nadView.delegate = self
+        nadView.load()
     }
     
     @objc func update() {
@@ -68,8 +79,8 @@ class TableViewController: UITableViewController {
         cell.textLabel!.text = self.titleArray[indexPath.row]
         cell.textLabel?.adjustsFontSizeToFitWidth = true
         cell.detailTextLabel?.adjustsFontSizeToFitWidth = true
-        cell.textLabel?.numberOfLines = 5
-        cell.detailTextLabel?.numberOfLines = 5
+        cell.textLabel?.numberOfLines = 4
+        cell.detailTextLabel?.numberOfLines = 4
         
         return cell
     }
@@ -135,4 +146,7 @@ class TableViewController: UITableViewController {
         UserDefaults.standard.setValue(url, forKey: "url")
         present(webViewController, animated: true, completion: nil)
     }
+    
+    
+    
 }
