@@ -127,4 +127,12 @@ class TableViewController: UITableViewController {
             
         }
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let indexNumber = indexPath.row
+        let webViewController = WebViewController()
+        let url = youtubeURLArray[indexNumber]
+        UserDefaults.standard.setValue(url, forKey: "url")
+        present(webViewController, animated: true, completion: nil)
+    }
 }
