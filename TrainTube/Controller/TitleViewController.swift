@@ -15,6 +15,8 @@ class TitleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.isHidden = true
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             let nextVC = TableViewController()
             self.navigationController?.pushViewController(nextVC, animated: true)
