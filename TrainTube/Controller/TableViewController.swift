@@ -41,7 +41,7 @@ class TableViewController: UIViewController,
         self.nadView.setNendID(1018499, apiKey: "c357936aceb7d21ff7b09eb48481d2a704f2e96b")
         self.nadView.delegate = self
         self.nadView.load()
-        
+        print(tableView)
         getData()
         tableView.reloadData()
 
