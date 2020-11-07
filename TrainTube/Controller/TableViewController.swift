@@ -11,7 +11,9 @@ import SwiftyJSON
 import SDWebImage
 import NendAd
 
-class TableViewController: UITableViewController,
+class TableViewController: UIViewController,
+                           UITableViewDataSource,
+                           UITableViewDelegate,
                            NADViewDelegate {
     
     var youtubeData = YouTubeData()
@@ -23,33 +25,34 @@ class TableViewController: UITableViewController,
     
     let refresh = UIRefreshControl()
     
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var nadView: NADView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.isHidden = true
-        
-        tableView.refreshControl = refresh
-        refresh.addTarget(self, action: #selector(update), for: .valueChanged)
-        
-        getData()
-        tableView.reloadData()
-        
         tableView.delegate = self
         tableView.dataSource = self
         
-        nadView.setNendID(1018499, apiKey: "c357936aceb7d21ff7b09eb48481d2a704f2e96b")
-        nadView.delegate = self
-        nadView.load()
-    }
-    
-    @objc func update() {
+        navigationController?.navigationBar.isHidden = true
+        
+        self.nadView.setNendID(1018499, apiKey: "c357936aceb7d21ff7b09eb48481d2a704f2e96b")
+        self.nadView.delegate = self
+        self.nadView.load()
         
         getData()
         tableView.reloadData()
+
+        tableView.refreshControl? = refresh
+        refresh.addTarget(self, action: #selector(update), for: .valueChanged)
+    }
+    
+    @objc func update() {
+        getData()
+        tableView.reloadData()
         refresh.endRefreshing()
-        
     }
     
     @objc var scrollView: UIScrollView {
@@ -57,12 +60,12 @@ class TableViewController: UITableViewController,
         return tableView
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
         cell.selectionStyle = .none
@@ -85,18 +88,17 @@ class TableViewController: UITableViewController,
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    @objc func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return titleArray.count
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    @objc func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return view.frame.height / 4
     }
     
-    func getData() {
-        
+    @objc func getData() {
         var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyD20_3S8E_v3pghFrMSzc1v2Ud1tb4B-Mw&q=カンカン 電車 新幹線&part=snippet&maxResults=40&order=date"
         
         let url = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -138,7 +140,7 @@ class TableViewController: UITableViewController,
             
         }
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    @objc func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let indexNumber = indexPath.row
         let webViewController = WebViewController()
@@ -146,7 +148,4 @@ class TableViewController: UITableViewController,
         UserDefaults.standard.setValue(url, forKey: "url")
         present(webViewController, animated: true, completion: nil)
     }
-    
-    
-    
 }
